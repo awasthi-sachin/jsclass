@@ -67,50 +67,39 @@ input[type="button"]:hover{
 </head>
 <body>
   <div class="wrapper"> 
-    <form class ="form_box">
+    <form class ="form_box" name="formbox">
       <div class="output">
         <input type="text" name="disp" id="display" placeholder="00" >
       </di>
 
-        <input class="inputbox" type="button" value="1" onclick="console.log('123')">
-        <input class="inputbox" type="button" value="2">
-        <input class="inputbox" type="button" value="3">  
-        <input class="clr" type="button" value="C">  
+        <input class="inputbox" type="button" value="1" onclick="formbox.disp.value = '1' + value">
+        <input class="inputbox" type="button" value="2" onclick="formbox.disp.value = '2' + value">
+        <input class="inputbox" type="button" value="3" onclick="formbox.disp.value = '3' + value">  
+        <input class="clr" type="button" value="C" onclick="formbox.disp.value = 'c' + value">  
         <br>
-        <input class="inputbox" type="button" value="4" >
-        <input class="inputbox" type="button" value="5" >
-        <input class="inputbox" type="button" value="6" >
-        <input class="inputbox" type="button" value="+">  
+        <input class="inputbox" type="button" value="4" onclick="formbox.disp.value = '4' + value">
+        <input class="inputbox" type="button" value="5" onclick="formbox.disp.value = '5' + value">
+        <input class="inputbox" type="button" value="6" onclick="formbox.disp.value = '6' + value">
+        <input class="inputbox" type="button" value="+" onclick="formbox.disp.value = '1' + value">  
      
         <br>
-        <input class="inputbox" type="button" value="7">
-        <input  class="inputbox" type="button" value="8">
-        <input class="inputbox" type="button" value="9">
-        <input class="inputbox" type="button" value="-">  
+        <input class="inputbox" type="button" value="7" onclick="formbox.disp.value = '7' + value">
+        <input  class="inputbox" type="button" value="8" onclick="formbox.disp.value = '8' + value">
+        <input class="inputbox" type="button" value="9" onclick="formbox.disp.value = '9' + value">
+        <input class="inputbox" type="button" value="-" onclick="formbox.disp.value = '-' + value">  
     
         <br>
-        <input class="inputbox" type="button" value="0">
-        <input class="inputbox" type="button" value="%">
-        <input class="inputbox" type="button" value="*">  
-        <input id="dateBtn" type="button" value="=">
+        <input class="inputbox" type="button" value="0" onclick="formbox.disp.value = '0' + value">
+        <input class="inputbox" type="button" value="%" onclick="formbox.disp.value = '%' + value">
+        <input class="inputbox" type="button" value="*" onclick="formbox.disp.value = '*' + value">  
+    
+        <input type = "button" value = "=" onclick = "formbox.disp.value = eval(form1.answer.value) ">
+
   
     </form>
   </div>
 
-  <script>
  
- var sachin = document.querySelector('input').value;
- 
-
-const outputtext = document.getElementById('display');
-alert(outputtext);
-
-dateBtn.addEventListener('click', (event) => {
-    dateElement.innerHTML = Date();
-   
-  });
-
-  </script>
  
 </script>
 </html>
